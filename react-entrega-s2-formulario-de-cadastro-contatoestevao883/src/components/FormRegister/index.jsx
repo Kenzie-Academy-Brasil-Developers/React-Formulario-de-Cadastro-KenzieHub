@@ -1,14 +1,16 @@
-import { useForm } from 'react-hook-form'
-import * as yup from 'yup'
-import { yupResolver } from '@hookform/resolvers/yup'
-import { Form, Div } from '../../styles/Global/global'
-import { useHistory } from 'react-router-dom'
-import axios from 'axios'
+import { useForm } from 'react-hook-form';
+import * as yup from 'yup';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { Form, Div } from '../../styles/Global/global';
+import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../conxtexts/AuthContext';
+import { useContext } from 'react';
 
 
 
-const Register = () => {
-    const history = useHistory();
+const FormRegister= () => {
+    const navigate = useNavigate();
+    const { onSubmit } = useContext(AuthContext)
     
 
     const formSchema = yup.object().shape({
@@ -38,22 +40,13 @@ const Register = () => {
         resolver: yupResolver(formSchema),
     })
 
-    const onSubmit = (data) => {
-        console.log(data)
-        
-        axios.post("https://kenziehub.herokuapp.com/users", data)
-            .then((response) => {
-            console.log(response)
-            })
-            .catch((error) => console.log(error))
-            history.push("/")
-        }
+
 
     return (
         <>
             <Div>
                 <h1>Kenzie Hub</h1>
-                <button onClick={() => history.push("/")}>Voltar</button>
+                <button onClick={() => navigate("/")}>Voltar</button>
             </Div>
             <Form onSubmit={handleSubmit(onSubmit)}>
                 <h3>Crie sua conta</h3>
@@ -101,4 +94,4 @@ const Register = () => {
     )
 }
 
-export default Register;
+export default FormRegister;

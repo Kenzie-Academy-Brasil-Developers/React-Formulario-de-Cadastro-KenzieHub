@@ -2,14 +2,15 @@ import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { LoginForm, DivH1 } from '../../styles/Global/global';
-import { useHistory } from 'react-router-dom';
-import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { AuthContext } from '../../conxtexts/AuthContext'
 
 
 
 
-const Login = () => {
-    const history = useHistory();
+const FormLogin= () => {
+    const navigate = useNavigate();
 
     const formSchema = yup.object().shape({
         email: yup.string().required("Campo obrigatório"),
@@ -23,27 +24,15 @@ const Login = () => {
         } = useForm({
         resolver: yupResolver(formSchema),
     })
-
-    const signUp = (data) => {
-        axios.post("https://kenziehub.herokuapp.com/sessions", data)
-            .then((response) =>  {
-                console.log(response)
-                window.localStorage.clear()
-                window.localStorage.setItem("token", response.data.token)
-                window.localStorage.setItem("userId", response.data.user.id)
-                window.localStorage.setItem("user", response.data.user.name)
-                history.push(`/home`)
-        })
-        .catch((error) => error)
     
-    }
+    const { signIn } = useContext(AuthContext);
 
     return (
         <>
             <DivH1>
                 <h1>Kenzie Hub</h1>
             </DivH1>
-            <LoginForm onSubmit={handleSubmit(signUp)}>
+            <LoginForm onSubmit={handleSubmit(signIn)}>
                 <h3>Login</h3> 
                 <label>Email
                     <input type="email" placeholder='Digite aqui seu email' name="email" {...register("email")}/>
@@ -59,10 +48,10 @@ const Login = () => {
                 
                 <p>Ainda não possui uma conta?</p>
                 
-                <button className="cadastrar" onClick={() => history.push("/register")}>Cadastre-se</button>
+                <button className="cadastrar" onClick={() => navigate("/register")}>Cadastre-se</button>
             </LoginForm>
         </>
     )
 }
 
-export default Login;
+export default FormLogin;

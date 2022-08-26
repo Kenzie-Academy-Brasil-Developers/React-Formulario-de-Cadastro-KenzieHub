@@ -1,4 +1,4 @@
-import styled, {createGlobalStyle, css} from 'styled-components'
+import styled, {createGlobalStyle, css} from 'styled-components';
 
 export const Global = createGlobalStyle`
     body {
@@ -341,5 +341,179 @@ export const DivUser = styled.div`
 
     }
 `
+export const DivAbsolute = styled.div`
+    position: absolute;
+`
+export const Modal = styled.div`
+    background: #212529;
+    display: flex;
+    flex-direction: column;
+    width: 369px;
+    height: 200px;
+    margin-left: 800px;
 
 
+    
+    div{
+        display: flex;
+        align-itens: center;
+        justify-content:center;
+        width: 369px;
+        height: 300px;
+        background: #343B41
+        margin-bottom: 0px;
+    }
+
+    h3{
+        color: #F8F9FA;
+    }
+    
+    button{
+        background:#343B41;
+        border-style:none;
+        margin-left: 120px;
+        margin-top: 0px;
+        cursor: pointer;
+        color: #868E96;
+    }
+`
+
+
+export const ModalForm = styled.form`
+    display: flex;
+    align-itens: center;
+    justify-content:center;
+    background: #212529;
+
+
+    button{
+        background: #FF577F;
+        border: 1.2182px solid #FF577F;
+        border-radius: 4.06066px;
+        color: #FFFFFF;
+        width: 324px;
+        height: 48px;
+        margin-left: 20px;
+        margin-top: 20px;
+        font-size: 16px;
+    }
+
+`
+
+export const DivModal = styled.div`
+        display:flex;
+        flex-direction: column;
+        width: 400px;
+        height: 400px;
+        
+
+        label{
+            margin-bottom: 10px;
+            font-size: 12px;
+            color: #F8F9FA;
+            margin-left: 20px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        input{
+            width: 329.93px;
+            height: 48px;
+            background: #343B41;
+            border: 1.2182px solid #F8F9FA;
+            border-radius: 4px;
+            color:#ffff;
+            margin-left: 0px;
+            font-size: 16px;
+            
+        }
+
+        select{
+            width: 338.93px;
+            height: 50px;
+            background: #343B41;
+            border: 1.2182px solid #F8F9FA;
+            border-radius: 4px;
+            color:#ffff;
+            margin-left: 0px;
+            font-size: 16px;
+            
+        }
+        span{
+            color:#F10;
+            margin-left: 110px;
+        }
+`
+
+export const DivTecnology = styled.div`
+        background:#343B41;
+`
+
+export const DivTech = styled.div`
+    display: flex;
+    align-itens: center;
+    flex-direction: center;
+    justify-content: space-around;
+    width: 1820px;
+    color: #ffff;
+
+    button {
+        width: 40px;
+        height: 29px;
+        background: #212529;
+        border-radius: 4px;
+        color:#ffff;
+        margin-top: 10px;
+        border-style:none;
+        cursor: pointer;
+        font-size: 24px
+    }
+`
+
+export const DivCard = styled.div`
+    background: #343B41;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    width: 780px;
+    height: 416px;
+    margin-left: 565px;
+    margin-top: 50px;
+    overflow-y: scroll;
+    
+    
+    div{
+        marigin-top:50px;
+        background: #121214;
+        display:flex;
+        align-items: center;
+        width: 732px;
+        height: 49px;
+        margin-bottom: 5px;
+        margin-top: 20px;
+        border-radius: 4px;
+    }
+
+    h3{
+        color: #FFFFFF;
+        margin-left: 20px;
+        font-size: 14.2123px;
+    }
+    span {
+        color: #868E96;
+        margin-top: 0px;
+        margin-left: auto;
+        font-size: 12.182px;
+
+    }
+    button{
+        background: #121214;
+        border-style:none;
+        color:#ffffff;
+        margin-top: 3px;
+        cursor:pointer;
+    }
+    h2{
+        color:#ffffff;
+    }
+`
