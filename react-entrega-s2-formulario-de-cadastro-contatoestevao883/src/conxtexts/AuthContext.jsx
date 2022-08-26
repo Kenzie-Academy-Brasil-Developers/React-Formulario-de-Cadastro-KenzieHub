@@ -48,7 +48,7 @@ const AuthProvider = ( {children} ) => {
                 window.localStorage.setItem("user", response.data.user.name)
                 window.localStorage.setItem("course", response.data.user.course_module)
                 setUser(response.data.user.name)
-                setTechs([...techs, response.data.user.techs]) 
+                setTechs(response.data.user.techs) 
                 console.log(techs)
                 
                 api.defaults.headers.authorization = `Bearer ${response.data.token}`;
