@@ -116,7 +116,7 @@ const Home = () => {
                 )}
                 </DivAbsolute>
                 <DivCard>
-                        {techs.length < 2 ? ( 
+                        {techs.length < 1 ? ( 
                            <h2>Você não possui nenhuma tecnologia.</h2>
                     ) : (
                     techs?.map((tech, index)  => {
