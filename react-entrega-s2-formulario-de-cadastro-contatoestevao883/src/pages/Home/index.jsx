@@ -59,6 +59,10 @@ const Home = () => {
             return tech.id !== tech_id
           })
           setTechs(newList)
+          addToast({
+            type: 'success',
+            title: 'Tecnologia deletada com sucesso',
+          })
         })
         .catch((error) => {
           console.error(error)
