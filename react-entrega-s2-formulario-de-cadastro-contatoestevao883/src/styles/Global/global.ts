@@ -4,15 +4,16 @@ export const Global = createGlobalStyle`
     body {
         background: #121214;
         display: flex;
-        max-width: 100%;
-        overflow-x: hidden;
+        justify-content: center;
+        align-items: center;
+    
     }
 
 `
 export const Form = styled.form`
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    margin-left: 800px;
     align-items: center;
 
     background: #212529;
@@ -87,9 +88,7 @@ export const Form = styled.form`
     @media (max-width: 600px) {
         display: flex;
         flex-direction: column;
-        margin-left: 230px;
         align-items: center;
-        margin-right: 220px;
 
         background: #212529;
         height:850px;
@@ -102,11 +101,9 @@ export const Div = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left:  580px;
     margin-top: 50px;
 
     h1{
-        margin-left: 215px;
         color: #FF577F;
     }
 
@@ -138,11 +135,9 @@ export const DivH1 = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left:  580px;
     margin-top: 50px;
 
     h1{
-        margin-left: 215px;
         color: #FF577F;
     }
 
@@ -162,7 +157,6 @@ export const DivH1 = styled.div`
 export const LoginForm = styled.form`
     display: flex;
     flex-direction: column;
-    margin-left: 800px;
     align-items: center;
 
     background: #212529;
@@ -223,9 +217,7 @@ export const LoginForm = styled.form`
     @media (max-width: 600px) {
         display: flex;
         flex-direction: column;
-        margin-left: 230px;
         align-items: center;
-        margin-right: 220px;
 
         background: #212529;
         height:500px;
@@ -269,17 +261,15 @@ export const DivDashboard = styled.div`
 
     @media (max-width: 600px) {
         display: flex;
-        margin-rigth: 0px;
         align-itens: center;
         flex-direction: center;
-        justify-content: flex-start;
-        width: 600px;
+        width: 400px;
     
 
-        h1{
-            margin-right: 400px;
-            color: #FF577F;
-            font-size: 18px;
+     h1{
+        margin-right: 100px;
+        color: #FF577F;
+        font-size: 18px;
     }
     button{
         width: 40px;
@@ -300,7 +290,6 @@ export const DivSpan = styled.div`
     color:#ffff;
     
     @media (max-width: 600px) {
-        display:block;
         align-itens: center;
         flex-direction: center;
         margin-left: 10px;
@@ -315,7 +304,7 @@ export const DivHr = styled.div`
         border: none;
     }
     @media (max-width: 600px){
-        width: 650px
+        width: 400px
     }
 `
 export const DivUser = styled.div`
@@ -339,6 +328,13 @@ export const DivUser = styled.div`
         width: 400px;
         margin-left: 10px;
 
+    }
+    @media (max-width: 600px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 400px;
+        margin-left: 30px;
     }
 `
 export const DivAbsolute = styled.div`
@@ -375,6 +371,9 @@ export const Modal = styled.div`
         margin-top: 0px;
         cursor: pointer;
         color: #868E96;
+    }
+    @media (max-width: 600px){
+        margin-left: 20px;
     }
 `
 
@@ -463,10 +462,14 @@ export const DivTech = styled.div`
         background: #212529;
         border-radius: 4px;
         color:#ffff;
-        margin-top: 10px;
+        margin-top: 20px;
         border-style:none;
         cursor: pointer;
         font-size: 24px
+    }
+
+    @media(max-width: 600px){
+        width: 380px;
     }
 `
 
@@ -516,4 +519,20 @@ export const DivCard = styled.div`
     h2{
         color:#ffffff;
     }
+
+    @media (max-width: 600px){
+        width: 350px;
+        height: 416px;
+        margin-left: 20px;
+        
+         
+        div{
+            width: 330px;
+        }
+        h2{
+            font-size: 18px;
+            color:#ffffff;
+        }
+    }
+
 `
